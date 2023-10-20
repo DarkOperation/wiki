@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width">
+    <title>wiki server nostalgic 🖥️</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href=" /assets/cube.jpg">
+</head>
+<body class="mainmenubody">
+<div class="mc-menu mcm-titlebar">
+    <img src="./assets/title.png" class="gametitle">
+    <span class="yellow" id="splash"></span>
+</div>
+<div class="mc-menu">
+    <center>
+        <a href="/players/" class="mc-btn">Игроки</a>
+        <a href="/building/" class="mc-btn">Постройки</a>
+        <a href="/history/" class="mc-btn">История</a>
+        <div class="hc">
+            <a href="/about/" class="mc-btn mc-half">О вики</a>
+        </div>
+    </center>
+</div>
+<script>
+    const splashList = ["Tikhon_Java", "Salomatov656", "NoName123", "1.4.7", "1.4.6", "Minecraft", "java_8", "Apache", "Oracle", "Now With Multiplayer!", "Uses LWJGL!", "CLOSED SOURCES!", "C418!"];
+
+    function getRandomNumber() { return Math.floor(Math.random() * splashList.length); }
+
+    const num = getRandomNumber();
+    const thisSplash = splashList[num];
+
+    document.getElementById("splash").innerHTML = thisSplash;
+
+    const songs = ["1.mp3", "2.mp3", "3.mp3", "4.mp3"];
+
+    function playRandomSong() {
+        const randomIndex = Math.floor(Math.random() * songs.length);
+        const randomSong = "/assets/sounds/" + songs[randomIndex];
+
+        const audio = new Audio(randomSong);
+        audio.play();
+    }
+
+    playRandomSong();
+</script>
+<span class="mc-mcopy">&copy;&nbsp;Salomatov656, Tikhon_Java, 2023</span>
+</body>
+</html>
