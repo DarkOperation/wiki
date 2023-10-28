@@ -1,5 +1,9 @@
 @import url('mobile.css');
 
+body {
+    word-spacing: 5px;
+}
+
 @font-face {
     font-family: 'Minecraft';
     src: url('../fonts/minecraft.ttf');
