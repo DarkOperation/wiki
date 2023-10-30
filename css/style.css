@@ -250,6 +250,14 @@ p img {
     margin-top: 40px;
 }
 
+#content-about {
+    border-color: #000000;
+    border-right: 5px;
+    border-bottom: 0;
+    border-left: 0;
+    border-top: 0;
+}
+
 .mcsplashscreen .content {
     background-image: linear-gradient(to bottom, #000000cb, #00000099, #00000093, #000000bc);
     text-align: center;

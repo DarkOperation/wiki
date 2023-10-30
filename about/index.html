@@ -12,14 +12,22 @@
     <h1>О вики</h1>
     <div class="content">
         <p style="pointer-events:none;">
-            <img src="../assets/cube.jpg" height="200px" /><br><br>
-            Сделано игроками Salomatov656 и Tikhon_Java<br>
-            <br><br>
-            Шрифты: Acumin, Minecraft
-            <br>
+            <img src="../assets/cube.jpg" height="200px" id="grass" /><br><br>
         </p>
     </div>
-
+    <div id="content-about">
+        <div id="creators"></div>
+        <div id="credits"></div>
+    </div>
+    <div class="content">
+        <h2 style="font-family: 'Minecraft';color: white;font-weight: lighter;text-shadow: 3px 3px 0 #555;text-align: center;margin: 0;margin-top: 40px;">E-mail и Discord создателей</h2>
+        <br>
+        <a href="mailto:wikinostalgic@gmail.com" style="text-decoration: none;color: rgb(128,128,128);">wikinostalgic@gmail.com</a>
+        <br>
+        <a style="text-decoration: none;color: rgb(128,128,128);" href="https://discord.com/users/1063511434740371567">hacker(Salomatov656)</a>
+        <br>
+        <a style="text-decoration: none;color: rgb(128,128,128);" href="https://discord.com/users/1131987193116762242">Tikhon(Tikhon_Java)</a>
+    </div>
     <center><footer>
         <a href="../" class="mc-btn mc-half">Вернутся на главную</a>
     </footer></center>
@@ -35,6 +43,11 @@
         }
 
         playRandomSong();
+
+        const grass = document.getElementById("grass");
+        grass.addEventListener("click", () => {
+
+        });
     </script>
 </body>
 </html>
