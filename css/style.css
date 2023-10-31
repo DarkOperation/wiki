@@ -326,3 +326,15 @@ p img {
     pointer-events: none;
     margin: 0;
 }
+
+#content-about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #000000cb, #00000099, #00000093, #000000bc);
+}
+
+#creators, #credits {
+    width: 45%;
+    text-align: center;
+}

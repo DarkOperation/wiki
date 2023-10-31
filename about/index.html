@@ -11,13 +11,18 @@
 <body class="mcsplashscreen">
     <h1>О вики</h1>
     <div class="content">
-        <p style="pointer-events:none;">
-            <img src="../assets/cube.jpg" height="200px" id="grass" /><br><br>
+        <p style="pointer-events:none;" id="grass">
         </p>
     </div>
-    <div id="content-about">
-        <div id="creators"></div>
-        <div id="credits"></div>
+    <div id="content-about" style="font-family: Minecraft; color: white">
+        <div id="creators">
+            <h2 style="font-family: 'Minecraft';color: white;font-weight: lighter;text-shadow: 3px 3px 0 #555;text-align: center;margin: 0;margin-top: 40px;">Создатели</h2>
+            <p style="font-family: Minecraft;color: white">Tikhon_Java<br>Salomatov656</p>
+        </div>
+        <div id="credits">
+            <h2 style="font-family: 'Minecraft';color: white;font-weight: lighter;text-shadow: 3px 3px 0 #555;text-align: center;margin: 0;margin-top: 40px;">Помошники</h2>
+            <p style="font-family: Minecraft;color: white">Ждём-с:(</p>
+        </div>
     </div>
     <div class="content">
         <h2 style="font-family: 'Minecraft';color: white;font-weight: lighter;text-shadow: 3px 3px 0 #555;text-align: center;margin: 0;margin-top: 40px;">E-mail и Discord создателей</h2>
@@ -44,10 +49,27 @@
 
         playRandomSong();
 
-        const grass = document.getElementById("grass");
-        grass.addEventListener("click", () => {
+        const imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
 
-        });
+        function easterEgg() {
+            const out = document.getElementById("grass");
+            const randomIndex = Math.floor(Math.random() * imgs.length);
+            const randomImg = "../assets/images/" + imgs[randomIndex] + ".webp";
+
+            out.innerHTML = '<img src=' + randomImg + ' height="200px" onclick="easterEgg()"><br><br>';
+        }
+
+        const images = ["../assets/images/12.webp", "../assets/images/13.webp"];
+        let currentImageIndex = 0;
+
+        function halloween() {
+            const out = document.getElementById("grass");
+            const image = images[currentImageIndex];
+            out.innerHTML = `<img src='${image}' height='200px'> <br><br>`;
+            currentImageIndex = (currentImageIndex + 1) % 2;
+        }
+
+        setInterval(halloween, 2000);
     </script>
 </body>
 </html>
