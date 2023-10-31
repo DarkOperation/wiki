@@ -11,7 +11,10 @@
 <body class="mcsplashscreen">
     <h1>О вики</h1>
     <div class="content">
-        <p style="pointer-events:none;" id="grass">
+        <p>
+            <div id="grass">
+                <img src="../assets/cube.jpg" height='200px'><br><br>
+            </div>
         </p>
     </div>
     <div id="content-about" style="font-family: Minecraft; color: white">
@@ -52,24 +55,17 @@
         const imgs = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"];
 
         function easterEgg() {
+            console.log("Clicked!")
             const out = document.getElementById("grass");
             const randomIndex = Math.floor(Math.random() * imgs.length);
             const randomImg = "../assets/images/" + imgs[randomIndex] + ".webp";
-
-            out.innerHTML = '<img src=' + randomImg + ' height="200px" onclick="easterEgg()"><br><br>';
+            out.innerHTML = '<img src=' + randomImg + ' height="200px"><br><br>';
         }
 
-        const images = ["../assets/images/12.webp", "../assets/images/13.webp"];
-        let currentImageIndex = 0;
-
-        function halloween() {
-            const out = document.getElementById("grass");
-            const image = images[currentImageIndex];
-            out.innerHTML = `<img src='${image}' height='200px'> <br><br>`;
-            currentImageIndex = (currentImageIndex + 1) % 2;
-        }
-
-        setInterval(halloween, 2000);
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("DOM loaded!");
+            document.getElementById("grass").addEventListener("click", easterEgg);
+        });
     </script>
 </body>
 </html>
