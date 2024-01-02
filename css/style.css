@@ -150,7 +150,6 @@ p img {
     color: yellow;
     text-shadow: 2px 2px 0 black;
     font-size: 28px;
-    pointer-events: none;
     transform: translate(330px, -5px) rotate(-20deg);
     position: absolute;
     animation: mcmy-anim 2.5s ease-in-out infinite;
@@ -321,7 +320,6 @@ p img {
 .shots {
     height: 35vh;
     display: inline-block;
-    pointer-events: none;
     margin: 0;
 }
 

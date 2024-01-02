@@ -42,9 +42,9 @@
 
     if (thisSplash === "CLOSED SOURCES!") {
         document.getElementById("splash").innerHTML = thisSplash;
-        var list = document.getElementById("splash").addEventListener("click", function() {
-            document.getElementById("splash").innerHTML = '<a class="yellow" id="splash" style="text-decoration: none;" href="https://github.com/DarkOperation/wiki">OPEN SOURCE! CLICK ME!</a>'
-            list.removeEventListener();
+        document.getElementById("splash").addEventListener("click", function() {
+            document.getElementById("splash").innerHTML = '<span class="yellow" id="splash"><a href="https://github.com/darkoperation/wiki" style="text-decoration: none;color: #555555">OPEN SOURCE! CLICK ME!</a></span>';
+            setInterval(easterEgg, 200, "splash");
         });
     } else {
         document.getElementById("splash").innerHTML = thisSplash;
